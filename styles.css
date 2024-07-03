@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .logo {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+.hero {
+    background: #77aaff;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2, .hero h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects .project {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    background: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.projects .project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.projects .project h3 {
+    margin: 10px 0;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills li {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact .form-group {
+    margin-bottom: 15px;
+}
+
+.contact .form-group label {
+    display: block;
+}
+
+.contact .form-group input, .contact .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}

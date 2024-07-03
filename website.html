@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #1f1f1f;
+            color: #d7c710e9;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #d7c710e9 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header a:hover {
+            color: #d7c710e9;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header .logo {
+            float: left;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .hero {
+            background: #1f1f1f;
+            color: #d7c710e9;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h2, .hero h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            color: #fff;
+            background: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            border: 2px solid  #ff8a00, #e52e71;
+            box-shadow: 0 0 5px #d7c710e9, 0 0 15px #d7c710e9, 0 0 20px #d7c710e9, 0 0 25px #d7c710e9;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #d7c710e9;
+            box-shadow: 0 0 10px #d7c710e9, 0 0 20px #d7c710e9, 0 0 30px #d7c710e9, 0 0 40px #d7c710e9;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .projects .project {
+            float: left;
+            width: 45%;
+            margin: 2.5%;
+            background: #1f1f1f;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            border: 2px solid  #ff8a00, #e52e71;
+            box-shadow: 0 0 5px #d7c710e9, 0 0 10px #d7c710e9;
+        }
+
+        .projects .project img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .projects .project h3 {
+            margin: 10px 0;
+            color: #d7c710e9;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .skills li {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #d7c710e9;
+            border: 2px solid  #ff8a00, #e52e71;
+            margin: 5px;
+            box-shadow: 0 0 5px #d7c710e9, 0 0 10px #d7c710e9;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .skills li:hover {
+            box-shadow: 0 0 10px #d7c710e9, 0 0 20px #d7c710e9, 0 0 30px #d7c710e9, 0 0 40px #d7c710e9;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact .form-group {
+            margin-bottom: 15px;
+        }
+
+        .contact .form-group label {
+            display: block;
+            color: #d7c710e9;
+        }
+
+        .contact .form-group input, .contact .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #1f1f1f;
+            color: #f0f0f0;
+            border: 2px solid  #ff8a00, #e52e71;
+            box-shadow: 0 0 5px #d7c710e9, 0 0 10px #d7c710e9;
+        }
+
+        footer {
+            background: #1f1f1f;
+            color: #d7c710e9;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer .social-links a {
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1 style="background: linear-gradient(90deg, #ff8a00, #e52e71); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Akash's Portfolio</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Hi, I'm Akash</h2>
+            <h3>Profound in Python & MySQL</h3>
+            <p>Ready to Contribute to Technological Advancements</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Akash, a motivated individual aiming to secure a demanding role in a dynamic organization that offers the chance to enhance my technical skills and competencies while contributing to the company's success. Committed to achieving excellence through continuous learning and hands-on experience.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project">
+                    <img src="a:\res ppj\portfolio\crud.png" alt="Project 1">
+                    <h3>CRUD Management</h3>
+                    <p>CRUD management refers to the fundamental operations required to interact with a database or storage system. CRUD stands for Create, Read, Update, and Delete. These operations allow for comprehensive data handling in an application:
+                        <br>1. Create : Adding new records to the database.</br>
+                        <br>2. Read : Retrieving data from the database.</br>
+                        <br>3. Update : Modifying existing records in the database.</br>
+                        <br>4. Delete : Removing records from the database.</br>
+                        <br>In my recent project, I developed a Python script that performs these CRUD operations on a MySQL database, enabling efficient management of user data.</br>
+                    </p>
+                    <a href="https://github.com/akasah/CRUD.git" class="btn">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="a:\res ppj\portfolio\ai.jfif" alt="Project 2">
+                    <h3>Personal AI Assistant</h3>
+                    <p>AI assistant script designed to respond to voice commands. It outlines the setup required, such as installing necessary libraries and setting up the environment. The script itself includes features for greeting the user, opening specific websites based on commands like "open Google" or "open YouTube," and handling farewells to end the interaction. The script utilizes speech recognition for understanding commands and text-to-speech conversion to provide spoken responses.</p>
+                    <a href="https://github.com/akasah/My-Ai.git" class="btn">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="a:\res ppj\portfolio\math.jfif" alt="Project 3">
+                    <h3>Maths Quiz</h3>
+                    <p>Maths Quiz Simulation and Time Calculation
+                        <br>Overview: The Python script `quiz.py` simulates a quiz focused on math questions and tracks the time taken to complete it.
+                        <br>How It Works:
+                        <br>1. Welcome and Start : The script welcomes the user and waits for them to initiate the quiz by pressing Enter.
+                        <br>2. Timing : It records the start time as soon as the quiz begins.
+                        <br>3. Quiz Questions : Currently, the quiz asks five questions, starting with simple arithmetic like "What is 2 + 2?".
+                        <br>4. Completion : Upon answering all questions, it records the end time.
+                        <br>5. Time Calculation : The script calculates and displays the total time taken to complete the quiz.
+                        <br>Usage: To use the script, ensure Python is installed on your system, run `python quiz.py`, and follow the on-screen instructions to start and complete the quiz.
+                        <br>Additional Notes: This script provides a basic demonstration and can be expanded by adding more questions or enhancing user interaction. Feel free to customize the quiz content and functionality to suit specific educational or testing purposes.
+                    </p>
+                    <a href="https://github.com/akasah/Maths-quiz.git" class="btn">View Project</a>
+                </div>
+                <div class="project">
+                    <img src="a:\res ppj\portfolio\crop.png" alt="Project 4">
+                    <h3>Crop Recommendation</h3>
+                    <p>The Python script presented is designed to facilitate crop recommendation based on environmental factors such as temperature, humidity, and rainfall. It begins by importing necessary libraries for data handling (Pandas), machine learning (Scikit-learn), web application development (Streamlit), and other functionalities. The dataset, sourced from "Dataset.csv", undergoes initial preprocessing steps where missing values are identified and handled. Label encoding is applied to categorical data like crop types and district names to prepare them for machine learning models. The dataset is then split into training and testing sets for three separate machine learning tasks: predicting humidity, temperature, and rainfall. Various models such as Random Forest and XGBoost are employed to predict these environmental factors based on district and crop selections. Streamlit is utilized to create a user-friendly interface where users can input their location and crop details to receive recommended crops based on current weather conditions. Evaluation metrics such as Mean Absolute Error and R-squared score are computed to assess the accuracy of each model's predictions. Overall, the script integrates data preprocessing, machine learning model training, web application development, and model evaluation to provide tailored crop recommendations tailored to local environmental conditions.
+                    </p>
+                    <a href="https://github.com/akasah/ppj-main-code.git" class="btn">View Project</a>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>MySQL</li>
+                <li>Python</li>
+                <li>CSS</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <form action="contact-form-handler" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Akash. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/in/akash1207/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/akasah" target="_blank">GitHub</a></li>
+                <li><a href="https://www.instagram.com/akash.varadharaj/" target="_blank">Instagram</a></li>
+                <li><a href="mailto:akash65190@gmail.com" target="_blank">Email</a></li>
+                <li><a href="tel:+919840945127">Phone</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
